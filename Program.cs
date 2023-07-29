@@ -70,4 +70,6 @@ string[] newArray = CreatArrayStrings(c);
 FillNewArrayThreeCharsInString(myArr, newArray);
 // печатаем массив для проверки.
 ReadArray(newArray);
+// Мы проходим массив 2 раза, если принять длину нового массива такой же как и входного, то 
+// сразу можно заполнять новый массив, когда считаем длину.
 

@@ -65,11 +65,14 @@ int c = FindThreeCharsInSrtring(myArr);
 Console.WriteLine(c);
 Console.WriteLine();
 // Создаем новый массив из строк, длина которых меньше, либо равна 3 символам.
-string[] newArray = CreatArrayStrings(c);
-// заполняем массив элементами из входного массива.
-FillNewArrayThreeCharsInString(myArr, newArray);
-// печатаем массив для проверки.
-ReadArray(newArray);
+if (c > 0)
+{
+    string[] newArray = CreatArrayStrings(c);
+    // заполняем массив элементами из входного массива.
+    FillNewArrayThreeCharsInString(myArr, newArray);
+    // печатаем массив для проверки.
+    ReadArray(newArray);
+}
+else Console.WriteLine("Элементов массива, длина которых меньше, либо равна 3 символам, нет.");
 // Мы проходим массив 2 раза, если принять длину нового массива такой же как и входного, то 
 // сразу можно заполнять новый массив, когда считаем длину.
-

@@ -23,15 +23,54 @@ void FillArrayStrings(string[] arrStr)
 }
 void ReadArray(string[] array)
 {
-    for (int i = 0; i < array.Length-1; i++)
+    for (int i = 0; i < array.Length - 1; i++)
     {
-        Console.Write(array[i]+ ",");
+        Console.Write(array[i] + ",");
     }
-    Console.Write(array[array.Length-1]);
+    Console.Write(array[array.Length - 1]);
+}
+int FindThreeCharsInSrtring(string[] array)
+{
+    string findstring = String.Empty;
+    int length = 0;
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        findstring = array[i];
+        length = findstring.Length;
+        if (length <= 3)
+        {
+            count++;
+        }
+    }
+    return count;
+}
+void FillNewArrayThreeCharsInString(string[] arrayOld, string[] arrayNew)
+{
+    string str = String.Empty;
+    int length = 0;
+    int count = 0;
+    for (int i = 0; i < arrayOld.Length; i++)
+    {
+        str = arrayOld[i];
+        length = str.Length;
+        if (length <= 3)
+        {
+            arrayNew[count] = str;
+            count++;
+        }
+    }
 }
 // получаем входной массив строк
 int sizeArr = InputSize("введите количество строк: ");
 string[] myArr = CreatArrayStrings(sizeArr);
 FillArrayStrings(myArr);
 ReadArray(myArr);
+Console.WriteLine();
+int c = FindThreeCharsInSrtring(myArr);
+Console.WriteLine(c);
+Console.WriteLine();
+string[] newArray = CreatArrayStrings(c);
+FillNewArrayThreeCharsInString(myArr,newArray);
+ReadArray(newArray);
 

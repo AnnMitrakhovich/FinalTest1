@@ -32,29 +32,22 @@ void ReadArray(string[] array)
 int FindThreeCharsInSrtring(string[] array)
 {
     string findstring = String.Empty;
-    int length = 0;
     int count = 0;
     for (int i = 0; i < array.Length; i++)
     {
         findstring = array[i];
-        length = findstring.Length;
-        if (length <= 3)
-        {
-            count++;
-        }
+        if (findstring.Length <= 3) count++;
     }
     return count;
 }
 void FillNewArrayThreeCharsInString(string[] arrayOld, string[] arrayNew)
 {
     string str = String.Empty;
-    int length = 0;
     int count = 0;
     for (int i = 0; i < arrayOld.Length; i++)
     {
         str = arrayOld[i];
-        length = str.Length;
-        if (length <= 3)
+        if (str.Length <= 3)
         {
             arrayNew[count] = str;
             count++;
@@ -74,7 +67,7 @@ Console.WriteLine();
 // Создаем новый массив из строк, длина которых меньше, либо равна 3 символам.
 string[] newArray = CreatArrayStrings(c);
 // заполняем массив элементами из входного массива.
-FillNewArrayThreeCharsInString(myArr,newArray);
+FillNewArrayThreeCharsInString(myArr, newArray);
 // печатаем массив для проверки.
 ReadArray(newArray);
 

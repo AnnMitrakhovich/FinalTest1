@@ -67,10 +67,14 @@ string[] myArr = CreatArrayStrings(sizeArr);
 FillArrayStrings(myArr);
 ReadArray(myArr);
 Console.WriteLine();
+// Решение задачи. Находим длину нового массива.
 int c = FindThreeCharsInSrtring(myArr);
 Console.WriteLine(c);
 Console.WriteLine();
+// Создаем новый массив из строк, длина которых меньше, либо равна 3 символам.
 string[] newArray = CreatArrayStrings(c);
+// заполняем массив элементами из входного массива.
 FillNewArrayThreeCharsInString(myArr,newArray);
+// печатаем массив для проверки.
 ReadArray(newArray);
 
